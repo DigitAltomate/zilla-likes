@@ -1,8 +1,8 @@
 === Plugin Name ===
 Contributors: mbsatunc, gilbitron
 Requires at least: 3.4
-Tested up to: 4.1.13
-Stable tag: 1.2.0
+Tested up to: 4.9.6
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,11 @@ Add "like" functionality to your posts and pages. Display your most liked posts 
 
 == Changelog ==
 
-= 1.2.0 = 
+= 1.2.1 =
+06-19-2018
+- Fixed deprecation warning.
+
+= 1.2.0 =
 01-10-2016
 - Added `withCredentials: true` to ajax call so https backend will work with http frontend
 

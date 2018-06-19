@@ -3,7 +3,7 @@
 Plugin Name: ZillaLikes
 Plugin URI: http://www.themezilla.com/plugins/zillalikes
 Description: Add "like" functionality to your posts and pages
-Version: 1.1.1
+Version: 1.2.1
 Author: ThemeZilla
 Author URI: http://www.themezilla.com
 */
@@ -358,7 +358,7 @@ function zilla_likes()
 class ZillaLikes_Widget extends WP_Widget {
 
 	function __construct() {
-		parent::WP_Widget( 'zilla_likes_widget', 'ZillaLikes', array( 'description' => __('Displays your most popular posts sorted by most liked', 'zillalikes') ) );
+		parent::__construct( 'zilla_likes_widget', 'ZillaLikes', array( 'description' => __('Displays your most popular posts sorted by most liked', 'zillalikes') ) );
 	}
 
 	function widget( $args, $instance ) {
