@@ -22,6 +22,10 @@ Add "like" functionality to your posts and pages. Display your most liked posts 
 
 == Changelog ==
 
+= 1.2.2 =
+06-20-2018
+- Change required user capabilities for accessing settings from update_core to manage_options.
+
 = 1.2.1 =
 06-19-2018
 - Fixed deprecation warning.

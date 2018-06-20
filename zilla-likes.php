@@ -3,7 +3,7 @@
 Plugin Name: ZillaLikes
 Plugin URI: http://www.themezilla.com/plugins/zillalikes
 Description: Add "like" functionality to your posts and pages
-Version: 1.2.1
+Version: 1.2.2
 Author: ThemeZilla
 Author URI: http://www.themezilla.com
 */
@@ -53,10 +53,10 @@ class ZillaLikes {
 	function admin_menu() 
 	{
 		$icon_url = plugins_url( '/images/favicon.png', __FILE__ );
-		$page_hook = add_menu_page( __( 'ZillaLikes Settings', 'zillalikes'), 'ZillaLikes', 'update_core', 'zilla-likes', array(&$this, 'settings_page'), $icon_url );
-		add_submenu_page( 'zilla-likes', __( 'Settings', 'zillalikes' ), __( 'ZillaLikes Settings', 'zillalikes' ), 'update_core', 'zilla-likes', array(&$this, 'settings_page') );
+		$page_hook = add_menu_page( __( 'ZillaLikes Settings', 'zillalikes'), 'ZillaLikes', 'manage_options', 'zilla-likes', array(&$this, 'settings_page'), $icon_url );
+		add_submenu_page( 'zilla-likes', __( 'Settings', 'zillalikes' ), __( 'ZillaLikes Settings', 'zillalikes' ), 'manage_options', 'zilla-likes', array(&$this, 'settings_page') );
 		// ZillaFramework link
-		add_submenu_page( 'zillaframework', 'ZillaLikes', 'ZillaLikes', 'update_core', 'zilla-likes', array(&$this, 'settings_page') );
+		add_submenu_page( 'zillaframework', 'ZillaLikes', 'ZillaLikes', 'manage_options', 'zilla-likes', array(&$this, 'settings_page') );
 	}
 	
 	function settings_page()
