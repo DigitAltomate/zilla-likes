@@ -21,11 +21,16 @@ class ZillaLikes {
         add_filter('body_class', array(&$this, 'body_class'));
         add_action('publish_post', array(&$this, 'setup_likes'));
         add_action('wp_ajax_zilla-likes', array(&$this, 'ajax_callback'));
-		add_action('wp_ajax_nopriv_zilla-likes', array(&$this, 'ajax_callback'));
+	add_action('wp_ajax_nopriv_zilla-likes', array(&$this, 'ajax_callback'));
         add_shortcode('zilla_likes', array(&$this, 'shortcode'));
-        add_action('widgets_init', create_function('', 'register_widget("ZillaLikes_Widget");'));
+    	add_action('widgets_init', [$this, 'register_widgets']);
 	}
 
+	
+	function register_widgets() {
+		return new ZillaLikes_Widget;
+	}
+	
 	function zilla_likes_textdomain() {
 		// Set filter for plugin's languages directory
 		$zilla_likes_lang_dir = dirname( plugin_basename( __FILE__ ) ) . '/languages/';
